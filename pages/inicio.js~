@@ -1,0 +1,50 @@
+import React, { Component } from 'react'
+import Header from './Header.js'
+import { ButtonLink } from '../components/Botoes'
+import Button from '@material-ui/core/Button'
+import { Container } from '../styles/style'
+
+function Layout(props) {
+  return (
+    <div>
+	  <Header/>
+      {props.children}
+    </div>
+  )
+}
+
+
+class Inicio extends Component {	
+	render(){
+		return (
+		  <Layout>
+			  <Container>
+					<div>
+						<Button component={ButtonLink} href="/emprestimo" variant="contained" size="large" color="primary">
+							Empréstimo
+						</Button>
+						<br/>
+						<Button component={ButtonLink} href="/devolucao" variant="contained" size="large" color="primary">
+							Devolução
+						</Button>
+						<br/>
+						<Button component={ButtonLink} href="/debitos" variant="contained" size="large" color="primary">
+							Débitos
+						</Button>
+					</div>
+					<div>
+						<Button component={ButtonLink} href="/cadastro" as={'inicio/cadastro'} variant="contained" size="large" color="primary">
+							Cadastros
+						</Button>
+						<br/>
+						<Button component={ButtonLink} href="/relatorio" variant="contained" size="large" color="primary">
+							Relatórios
+						</Button>
+					</div>
+				</Container>
+    	</Layout>
+  	)
+  }
+}
+
+export default Inicio;

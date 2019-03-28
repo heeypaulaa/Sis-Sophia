@@ -1,0 +1,16 @@
+//import Link from 'next/link'
+import React from 'react'
+import Toolbar from '@material-ui/core/Toolbar';
+import AppBar from '@material-ui/core/AppBar';
+
+export default function Header() {
+  return (
+    <div>
+    	<AppBar className={classes.appBar} color='primary' position ='fixed'>
+          <Toolbar>
+            <img className="logo" src="./logo.png" alt="Logo"/>
+          </Toolbar>
+        </AppBar>
+    </div>
+  )
+}
